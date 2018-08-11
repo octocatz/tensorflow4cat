@@ -1,5 +1,31 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400);
+@import url(//fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+
+html,body {
+	color: #333;
+	font-family: 'Rounded Mplus 1c','游ゴシック体', 'Yu Gothic', 'YuGothic' ;
+	font-weight: 500;
+	line-height: 1.625;
+	background: #fff;
+}
 .main_img{
 	height:100px;
 	width:150px
         object-fit: contain;
+}
+
+.stripe_base{
+	background-image: linear-gradient(
+	-45deg,
+	#f5eeed 25%,
+	#f4e2de 25%,
+	#f4e2de 50%,
+	#f5eeed 50%,
+	#f5eeed 75%,
+	#f4e2de 75%,
+	#f4e2de
+	);
+	background-size: 40px 40px;
+	background-attachment: fixed;
 }
