@@ -8,4 +8,4 @@
 
 ## Architecture
 
-
+![architecture](https://github.com/octocatz/tensorflow4cat/blob/images/tensorflow4cat.png)
