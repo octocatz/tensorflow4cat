@@ -14,7 +14,6 @@ $img_data = file_get_contents($tmpfile);
 $finfo = finfo_open(FILEINFO_MIME_TYPE);
 $mime_type = finfo_buffer($finfo, $img_data);
 finfo_close($finfo);
-#echo 'mime:'.$mime_type.'<p>';
 
 $ext = "";
 switch ($mime_type) {
@@ -29,35 +28,16 @@ if ($ext == ""){
 	echo "invalid file type!!<p>";
 	exit('jpg/png only allowed!');
 }
-#echo 'file type is ...['.$ext.']<p>';
 $rand_file_name = md5(uniqid(rand(), true));
 $rand_file_name .= '.'.$ext;
 $uploadfile = $uploaddir . $rand_file_name;
 
-#echo 'uploadfile:'.$uploadfile.'<p>';
-#echo $_FILES['up_file']['tmp_name'];
-
 if (move_uploaded_file($_FILES['up_file']['tmp_name'], $uploadfile)) {
-	    #echo "File is valid, and was successfully uploaded.<p>";
 } else {
-	    echo "Possible file upload attack!<p>";
 }
 
-
-/*
-echo 'Here is some more debugging info:<p>';
-print_r($_FILES);
-*/
-
-/*
-if(isset($_POST["q1"])){
-}else{
-	print "ネコを選んでください。";
-}
-*/
 $img_name = $_POST["q1"];
 $img_file = $img_name . ".jpg";
-#$exec_cmd = "./start.sh " . $img_file;
 $exec_cmd = "./start.sh " . $uploadfile;
 
 ?>
