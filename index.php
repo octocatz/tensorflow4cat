@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html class='stripe_base'>
 <head>
 <meta charset="utf-8">
-<title>POST_SAMPLE</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ねこ診断</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class='stripe_base'>
-<h1>Tensorflowでねこの画像認識</h1>
-<h2>判別したいねこを選択して[Check]をおしてね。</h2><p>
+<h1>ねこの画像認識</h1>
+<h3>お気に入りのねこの画像をアップして判定してみよう！</h3><p>
+
+<div class="balloon5">
+  <div class="faceicon">
+   <img src="img/illustcat.png">
+  </div>
+  <div class="chatting">
+    <div class="says">
+      <p>ねこの画像をアップしてね。</p>
+    </div>
+  </div>
+</div>
+
 <form name="tfaction" action="tf.php" method="POST" enctype="multipart/form-data">
-<!--
- <p>ネコ1<input type="radio" name="q1" value="cat1" checked><p><img src="./img/cat1.jpg" class="main_img">
- <p>ネコ2<input type="radio" name="q1" value="cat2"><p><img src="./img/cat2.jpg" class="main_img">
- <p>ネコ3<input type="radio" name="q1" value="cat3"><p><img src="./img/cat3.jpg" class="main_img">
- <p>
--->
- ファイルをアップする:<input type="file" name="up_file"><br>
- <input type="submit" value="アップしたファイルでCheck！">
-<!--
-<p><input type="submit" name="check" value="Checkする" /></p>
--->
+<input type="file" class="square_btn" name="up_file"><br>
+
+<div class="balloon5">
+  <div class="faceicon">
+   <img src="img/illustcat.png">
+  </div>
+  <div class="chatting">
+    <div class="says">
+      <p>アップできたら判定してみよう！</p>
+    </div>
+  </div>
+</div>
+
+ <input type="submit" class="square_btn" value="種別を判定">
 </form>
+<p>
+
 </body>
 </html>
