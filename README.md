@@ -1,7 +1,11 @@
 # tensorflow4cat
 
-## images
+## Images
 
 ![tensorweb1](https://github.com/octocatz/tensorflow4cat/blob/images/tensor1.png)
 
-## architecture
+![tensorweb2](https://github.com/octocatz/tensorflow4cat/blob/images/tensor2.png)
+
+## Architecture
+
+
