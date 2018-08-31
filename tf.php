@@ -18,6 +18,11 @@ $finfo = finfo_open(FILEINFO_MIME_TYPE);
 $mime_type = finfo_buffer($finfo, $img_data);
 finfo_close($finfo);
 
+
+$exec_rm = "find ./uploads/* -mtime +1 | xargs rm -f";
+exec($exec_rm);
+
+
 $ext = "";
 switch ($mime_type) {
 case "image/png":
