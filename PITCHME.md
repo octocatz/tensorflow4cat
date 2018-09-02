@@ -9,11 +9,24 @@ https://gitpitch.com/***
 ---
 Tensolflowって？
 ---
+なんでやったか？
+XX社ZZでAIやったニュースとか
+→どんなん？
+---
 構成図
 ---
-大変だったこと　  
+つらみがすごい
+うまく動かない。→StackOverflowで検索。NG。自分で質問する。その直後解決する。あるある。
+
+Tensorflow.jsを使おうとする→結構方式違うっぽい。断念。
+
 ### theme :night
 ---
+楽しかったこと
+---
+
+---
+
 - Java
 - JavaScript |
 - Kotlin |
