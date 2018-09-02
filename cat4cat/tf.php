@@ -11,7 +11,7 @@
 <h3>判定結果は・・・</h3>
 <?php
 
-$uploaddir = '/var/www/html/uploads/';
+$uploaddir = './uploads/';
 $tmpfile = $_FILES['up_file']['tmp_name'];
 $img_data = file_get_contents($tmpfile);
 $finfo = finfo_open(FILEINFO_MIME_TYPE);
@@ -87,7 +87,7 @@ $l_point1 = round($ary_likes[1] * 100,2). "%";
  </div>
 </div>
 <p>
-<p><p><img src="<?php echo '/uploads/'.$rand_file_name; ?>" class="main_img"><p>
+<p><p><img src="<?php echo './uploads/'.$rand_file_name; ?>" class="main_img"><p>
 <?php
 function err(){
 $heredocs = <<< EOM

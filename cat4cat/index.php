@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ねこ診断(β版)</title>
+<title>ねこチェッカー(β版)</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class='stripe_base'>
-<h1>ねこの画像認識</h1>
-<h3>お気に入りのねこの画像をアップして判定してみよう！</h3><p>
+<h1>ねこチェッカー(β版）</h1>
+<h3>お気に入りのねこの画像をアップして種別を判定してみよう！</h3><p>
 
 <div class="balloon5">
   <div class="faceicon">
