@@ -9,3 +9,12 @@
 ## Architecture
 
 ![architecture](https://github.com/octocatz/tensorflow4cat/blob/images/tensorflow4cat.png)
+
+
+## Scraping
+```
+pip install google_images_download
+
+googleimagesdownload -k "xxx cat"
+```
+
