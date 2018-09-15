@@ -45,11 +45,11 @@ Tensorflow.jsを使おうとする→結構方式違うっぽい。断念。
 ### transition : fade
 +++?code=index.php
 
----
++++
 
 ### logo : assets/logo.png
 
----
++++
 
 ### グラフやチャートの表示
 <canvas data-chart="radar">
@@ -58,7 +58,8 @@ Tensorflow.jsを使おうとする→結構方式違うっぽい。断念。
     2017, 28, 48, 40, 19, 86, 27, 90
 </canvas>
 
----
++++
+
 ハイライトサンプル
 ```
 var str1 = 'hello world';
@@ -69,11 +70,11 @@ console.log( str2 );
 console.log( str3 );
 ```
 @[2](flagに「true」を代入)
----
++++
 ### slide-number: true
----
++++
 もっとこうしたい:muscle:
----
++++
 ### footnote : "© 2018 ***"
----
++++
 おわり
