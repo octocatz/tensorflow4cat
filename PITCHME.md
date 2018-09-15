@@ -1,11 +1,18 @@
-### Tensorflowでネコの画像認識Webつくってみた
-
+### Tensorflowで
+### ネコの画像認識Webつくってみた
 
 Name
 
----
++++
+
+○Photo
+Name:
+Department:
+
++++
+
 最初にこんなの作りました。  
-https://gitpitch.com/octocatz/tensorflow4cat
+XXX
 
 +++
 
@@ -73,7 +80,7 @@ console.log( str3 );
 +++
 ### slide-number: true
 +++
-もっとこうしたい:muscle:
+もっとこうしたい
 +++
 ### footnote : "© 2018 ***"
 +++
