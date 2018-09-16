@@ -12,15 +12,16 @@ Work:SystemIntegrate/DevOps...
 
 +++
 ### 前提
-- インフラ・エンジニア
-- 機械学習ははじめて
-- 数学や統計学も初心者
+- インフラ・運用エンジニアです
+- 機械学習ははじめてです
+- 数学や統計学も初心者です
 - 言語はPHP/JavaScript/Perlなど
 +++
 ### 機械学習ってはやってますよね！
 - ニュース
 - 話題
 - 情報は聞くけどさわったことない
+
 →本当に使えるレベルで動くの？🤔
 
 +++
@@ -55,12 +56,6 @@ Tensorflowを使ってネコの画像認識を試してみた話
 - GCP VMインスタンス(n1-standard-1(vCPU x 1、メモリ 3.75 GB))
 - OS Debian 4.9
 - Python 3.5.3
-
-+++
-### 流れ
-- スクレイピング
-- 学習
-- 画像認識の実行
 
 +++
 ### チュートリアルのイメージ
@@ -118,6 +113,7 @@ python3 retrain.py \
   --output_graph=retrained_graph.pb \
   --output_labels=retrained_labels.txt \
   --image_dir=gakusyu_data
+@[3](training_steps：学習回数)
 ```
 @[3](training_steps：学習回数)
 @[8](gakusyu_data：学習させる画像フォルダ)
