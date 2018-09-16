@@ -113,11 +113,14 @@ python3 retrain.py \
   --output_graph=retrained_graph.pb \
   --output_labels=retrained_labels.txt \
   --image_dir=gakusyu_data
-@[3](training_steps：学習回数)
-  
+
+
+
 ```
+
 @[3](training_steps：学習回数)
 @[8](gakusyu_data：学習させる画像フォルダ)
+
 +++
 ### 画像を認識・判別できるか試してみる
 ```
