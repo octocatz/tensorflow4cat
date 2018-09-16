@@ -1,9 +1,9 @@
 transition : fade
 charts : true
-footnote : "hidenovuk"
+footnote : ""
 published : true
-theme : moon
-raw : false
+# theme : moon
+# raw : false
 # theme-override : templates-sunkist/assets/css/PITCHME.css
 # theme-override : assets/css/PITCHME.codemax.css
 # logo : assets/image/logo.png
@@ -11,9 +11,9 @@ raw : false
 # theme-override : templates-space/assets/css/PITCHME.css
 # theme-override : templates-space/assets/css/PITCHME.codemax.css
 # background : templates-space/assets/image/octavian-rosca.jpg
-theme-override : assets/css/PITCHME.css
+# theme-override : assets/css/PITCHME.css
 # theme-override : templates-bullseye/assets/css/PITCHME.css
-background : templates-bullseye/assets/image/bullseye.svg
+# background : templates-bullseye/assets/image/bullseye.svg
 background-size : cover
 # vertical-center : false
 # autoslide : 7000
