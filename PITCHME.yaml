@@ -1,4 +1,4 @@
-transition : fade
+# transition : fade
 charts : true
 footnote : ""
 published : true
