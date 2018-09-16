@@ -91,9 +91,9 @@ googleimagesdownload -k "Scottish Fold"
 ```
 +++
 ### 選別する
-＿人人人人人人人人人人人＿
-＞　これはネコじゃない　＜
-￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
+#### ＿人人人人人人人人人人人＿
+#### ＞　これはネコじゃない　＜
+#### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 
 +++
 ### Tensorflowのインストール
