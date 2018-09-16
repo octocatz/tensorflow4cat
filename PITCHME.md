@@ -113,7 +113,7 @@ python3 retrain.py \
   --output_graph=retrained_graph.pb \
   --output_labels=retrained_labels.txt \
   --image_dir=gakusyu_data
-  
+...
 ```
 @[1]
 @[3](training_steps：学習回数)
