@@ -139,6 +139,7 @@ OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-c
 RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moonwalker_the_singapura.jpg (Invalid JPEG data or crop window, data size 1671168
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
+@[fragment-range]
 今度はファイルサイズ。ごっそり消す。つらみがすごい。
 
 +++
@@ -152,7 +153,8 @@ abyssinian: 0.03
 ```
 +++
 ### 全件出るようにする
-```label_image.py
+label_image.py
+```
 top_k = results.argsort()[-5:][::-1] #上位5件のみ
 labels = load_labels(label_file)
 for i in top_k:
