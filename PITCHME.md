@@ -22,15 +22,15 @@ Work:SystemIntegrate/DevOps...
 - 話題
 - 情報は聞くけどさわったことない
 
-→本当に使えるレベルで動くの？🤔
+→本当に使えるレベルで動くの？🙄
 
 +++
 ### これから話すこと
-Tensorflowを使ってネコの画像認識を試してみた話
+Tensorflowを使ってネコの画像認識を試してみた話😺
 
 +++
 ### 話さないこと
-機械学習の統計とか数学的な話
+機械学習の統計とか数学的な話📊
 
 +++
 ### Agenda
@@ -53,9 +53,9 @@ Tensorflowを使ってネコの画像認識を試してみた話
 
 +++
 ### 環境
-- GCP VMインスタンス(n1-standard-1(vCPU x 1、メモリ 3.75 GB))
-- OS Debian 4.9
-- Python 3.5.3
+- GCP VMインスタンス：n1-standard-1(vCPU x 1、メモリ 3.75 GB)📦
+- OS：Debian 4.9
+- Python：3.5.3
 
 +++
 ### チュートリアルのイメージ
@@ -91,7 +91,9 @@ googleimagesdownload -k "Scottish Fold"
 ```
 +++
 ### 選別する
-例。これはネコじゃない。削除。
+＿人人人人人人人人人人人＿
+＞　これはネコじゃない　＜
+￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 
 +++
 ### Tensorflowのインストール
@@ -115,7 +117,6 @@ python3 retrain.py \
   --image_dir=gakusyu_data
 ...
 ```
-@[1]
 @[3](training_steps：学習回数)
 @[8](gakusyu_data：学習させる画像フォルダ)
 
@@ -140,7 +141,7 @@ RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moo
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
 @[fragment-range]
-今度はファイルサイズ。ごっそり消す。つらみがすごい。
+今度はファイルサイズ。ごっそり消す。
 
 +++
 ### 結果が5種類しかでない
@@ -151,8 +152,10 @@ american shorthair: 0.05
 singapura cat: 0.04
 abyssinian: 0.03
 ```
+🤔🤔🤔🤔🤔
+
 +++
-### 全件出るようにする
+### 調べた結果・・・
 label_image.py
 ```
 top_k = results.argsort()[-5:][::-1] #上位5件のみ
@@ -166,9 +169,10 @@ labels = load_labels(label_file)
 for i in top_k:
   print('{}: {:.2f}'.format(labels[i], results[i]))
 ```
+デフォルトでは5件のみでソートしているため、変更。
 +++
 ### 学習件数をかえてみる
-100→500の差。すごい。
+100→500の差。すごい😼
 
 +++
 ### ネコの違いは判別できたか？
@@ -181,14 +185,13 @@ for i in top_k:
 - 壁が結構多い。
 - 公式ドキュメントは英語のみ。
 - Stackoverflowとかに聞いても微妙。
-- むしろ壁しかない。
 - でも動きが実感できる。
 - アイデア次第で色々つくれそう。
 
 +++
-###もっとこうしたい
+### もっとこうしたい
 
-tensorflow.js 使ってみたい。
+tensorflow.js(2018/05公開) 使ってみたい💪
 
 +++
 END
