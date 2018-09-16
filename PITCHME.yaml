@@ -2,7 +2,7 @@
 charts : true
 footnote : ""
 published : true
-# theme : moon
+theme : night
 # raw : false
 # theme-override : templates-sunkist/assets/css/PITCHME.css
 # theme-override : assets/css/PITCHME.codemax.css
