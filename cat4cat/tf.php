@@ -3,37 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ねこ診断</title>
+<title>ねこチェッカー(β版）</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class='stripe_base'>
-<h1>ねこの画像認識</h1>
+<h1>ねこチェッカー(β版）</h1>
 <h3>判定結果は・・・</h3>
 <?php
-$uploaddir = './uploads/';
+require('./translate.php');
+$uploaddir = 'uploads/';
 $tmpfile = $_FILES['up_file']['tmp_name'];
-$img_data = file_get_contents($tmpfile);
-$finfo = finfo_open(FILEINFO_MIME_TYPE);
-$mime_type = finfo_buffer($finfo, $img_data);
-finfo_close($finfo);
+
+if ($ext=is_img($tmpfile)) {
+} else {
+    err();
+    exit();
+}
+
+function is_img($file)
+{
+    if (!(file_exists($file) && ($type=exif_imagetype($file)))) return false;
+    switch ($type) {
+        case IMAGETYPE_GIF:
+            return 'gif';
+        case IMAGETYPE_JPEG:
+            return 'jpg';
+        case IMAGETYPE_PNG:
+            return 'png';
+        default:
+            return false;
+    }
+}
 
 $exec_rm = "find ./uploads/* -mtime +1 | xargs rm -f";
 exec($exec_rm);
 
-
-$ext = "";
-switch ($mime_type) {
-case "image/png":
-	$ext = "png";
-	break;
-case "image/jpeg":
-	$ext = "jpg";
-	break;
-}
-if ($ext == ""){
-	err();
-	exit();
-}
 $rand_file_name = md5(uniqid(rand(), true));
 $rand_file_name .= '.'.$ext;
 $uploadfile = $uploaddir . $rand_file_name;
@@ -47,9 +51,12 @@ $img_file = $img_name . ".jpg";
 $exec_cmd = "./start.sh " . $uploadfile;
 exec($exec_cmd,$out2,$ret2);
 $likes = $out2[0]; 
-$ary_likes = explode(" ",$likes);
+$ary_likes = explode(":",$likes);
 $l_name1 = $ary_likes[0];
 $l_point1 = round($ary_likes[1] * 100,2). "%";
+
+// translate
+$l_name_ja = translate4ja($l_name1);
 ?>
 
 <div class="balloon5">
@@ -58,7 +65,7 @@ $l_point1 = round($ary_likes[1] * 100,2). "%";
  </div>
  <div class="chatting">
   <div class="says">
-   <p>選んだ写真のネコは、たぶん <span class="str_f"><?php print $l_name1; ?></span> だよ</p>
+   <p>選んだ写真のネコは、たぶん <span class="str_f"><?php print $imgflg . $l_name_ja; ?></span> だよ</p>
   </div>
  </div>
 </div>
@@ -85,8 +92,14 @@ $l_point1 = round($ary_likes[1] * 100,2). "%";
 </div>
 <p>
 <p><p><img src="<?php echo './uploads/'.$rand_file_name; ?>" class="main_img"><p>
+<p><p>
+
+<!--a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mllab.biz/cat4cat/" data-text="" data-via="" data-size="" data-related="" data-count="" data-hashtags="AIcat">Tweet</a> 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<p><p-->
+
 <?php
-function err(){
+function err($mime_type){
 $heredocs = <<< EOM
 <div class="balloon5">
  <div class="faceicon">
@@ -102,6 +115,7 @@ $heredocs = <<< EOM
 <input type="button" class="square_btn" onclick="history.back();" value="もう一度">
 EOM;
 print $heredocs;
+print $mime_type;
 }
 ?>
 <input type="button" class="square_btn" onclick="history.back();" value="もう一度">

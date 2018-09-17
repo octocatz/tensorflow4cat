@@ -137,7 +137,12 @@ if __name__ == "__main__":
     })
   results = np.squeeze(results)
 
-  top_k = results.argsort()[-5:][::-1]
+  #print(results.shape)  # (19,)
+  # 確率値なので合計1になることを確認
+  #print(np.sum(results))  # 1.0000001
+  # 昇順ソート
+  top_k = results.argsort()[::-1]
   labels = load_labels(label_file)
   for i in top_k:
-    print(labels[i], results[i])
+      print('{}: {:.2f}'.format(labels[i], results[i]))
+

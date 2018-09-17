@@ -1,13 +1,22 @@
 abyssinian
+american curl
 american shorthair
 bengal
 birman
 british longhair
 british shorthair
+chartreux
+chinchilla persian
 egyptianmau
+exotic shorthair
+himalayan cat
+kinkalow
 laperm
 mainecoon
+minuet cat
 munchkin cat
+norwegian forest cat
+persian cat
 ragamuffin
 scottish fold
 scottish straight
@@ -16,4 +25,5 @@ siberian cat
 singapura cat
 somali cat
 tonkinese
+toyger
 ragdoll
