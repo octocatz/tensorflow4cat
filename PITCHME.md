@@ -69,11 +69,12 @@ persia 0.014754322
 - GCP VMインスタンス：n1-standard-1(vCPU x 1、メモリ 3.75 GB)
 - OS：Debian 4.9
 - Python：3.5.3
+
 <img src="img/gcp.png" width="220px">
 
 +++
 ### チュートリアルにそって実装
-<img src="img/tensor.png" width="220px">
+<img src="img/tensor.png" width="620px">
 
 +++
 ### まずはスクレイピング
