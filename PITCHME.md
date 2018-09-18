@@ -47,7 +47,9 @@
 +++
 ### イメージ
 <img src="img/russian.jpg" width="220px">
+
 ```
+
 python3 /usr/local/tf/label_image.py --image cat1.jpg --graph /usr/local/tf/retrained_graph.pb
 
 ```
