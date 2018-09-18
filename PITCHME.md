@@ -46,11 +46,12 @@
 - お題となる画像を与えて認識できるかチェックしてみる|
 +++
 ### イメージ
-<img src="img/russian.png" width="220px">
+<img src="img/russian.jpg" width="220px">
 ```
 python3 /usr/local/tf/label_image.py --image cat1.jpg --graph /usr/local/tf/retrained_graph.pb
 
-
+```
+```
 russianblue 0.7167683
 americanshorthair 0.15780476
 munchkin 0.0629924
