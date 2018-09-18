@@ -9,6 +9,7 @@ Name:梅ヶ谷直紀
 Joined Company:2009年
 Work:システム構築PL/DevOps@飯田橋/汐留
 Hobby:筋トレ/一眼レフ
+Hot:GoLang!
 
 +++
 ### 前提
