@@ -44,6 +44,7 @@
 - ネコの画像をスクレイピング|
 - 画像を学習させる|
 - お題となる画像を与えて認識できるかチェックしてみる|
+
 +++
 ### イメージ
 <img src="img/russian.jpg" width="220px">
@@ -53,6 +54,7 @@
 python3 /usr/local/tf/label_image.py --image cat1.jpg --graph /usr/local/tf/retrained_graph.pb
 
 ```
+結果が返ってくる！
 ```
 russianblue 0.7167683
 americanshorthair 0.15780476
@@ -60,18 +62,17 @@ munchkin 0.0629924
 mikanecat 0.047680147
 persia 0.014754322
 ```
+
 +++
 ### 環境
 - GCP VMインスタンス：n1-standard-1(vCPU x 1、メモリ 3.75 GB)
 - OS：Debian 4.9
 - Python：3.5.3
+<img src="img/gcp.png" width="220px">
 
 +++
-### チュートリアルのイメージ
-インストールして
-https://www.tensorflow.org/install/install_mac
-画像認識
-https://www.tensorflow.org/tutorials/images/image_recognition
+### チュートリアルにそって実装
+<img src="img/tensor.png" width="220px">
 
 +++
 ### まずはスクレイピング
@@ -103,6 +104,12 @@ googleimagesdownload -k "Scottish Fold"
 30種類（人気順）×100枚
 +++
 ### 選別する
+<img src="img/err1.gif" width="220px">
++++
+<img src="img/err2.jpg" width="220px">
++++
+<img src="img/err3.jpg" width="220px">
++++
 #### ＿人人人人人人人人人人人＿
 #### ＞　これはネコじゃない　＜
 #### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
@@ -141,7 +148,7 @@ python3 retrain.py \
 OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-cat-mammal-whiskers-vertebrate-british-shorthair-european-shorthair-chartreux-russian-blue-korat-cat-mia-small-to-medium-sized-cats-cat-like-mammal-domestic-short-haired-cat-american-shorthair-blue-cat's-743876.jpg_https~tfhub.dev~google~imagenet~inception_v3~feature_vector~1.txt"
 
 ```
-ファイル名長いのね。mv。
+ファイル名が長いらしい。mvで置換。
 +++
 ### こんどはファイルサイズ
 ```
@@ -149,10 +156,10 @@ RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moo
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
 @[fragment-range]
-今度はファイルサイズ。ごっそり消す。
+今度はファイルサイズ。大きいサイズの画像は消す。
 
 +++
-### 画像を認識・判別できるか試してみる
+### いよいよ画像を認識できるか試してみる
 ```
 python3 label_image.py --xxx.jpg --graph retrained_graph.pb --labels retrained_labels.txt
 ```
@@ -185,14 +192,23 @@ for i in top_k:
   print('{}: {:.2f}'.format(labels[i], results[i]))
 ```
 デフォルトでは5件のみでソートしているため、変更。
+
 +++
-### 学習件数をかえてみる
-100→500の差。すごい😼
+### 学習回数をかえてみる
+100→500の変化。すごい。
+<img src="img/cat3.jpg" width="220px">
+
+```
+persia 0.124754322
+```
+```
+persia 0.291819281
+```
 
 +++
 ### ネコの違いは判別できたか？
 - 似てる種類はわからない。
-- むしろあってるかどうかもよくわからない。
+- むしろあってるかどうかよくわからない。
 - 明確な違いがある動物でやるといいかも。
 
 +++
@@ -207,13 +223,14 @@ pros
 
 +++
 ### Webにしてみました
-(イメージ)
+<img src="img/web.png" width="220px">
 
 +++
 
 ### これからやりたいこと
 
 tensorflow.js(2018/05公開) 
+<img src="img/tensorjs.png" width="220px">
 使ってみたい💪
 
 +++
