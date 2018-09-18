@@ -105,15 +105,14 @@ googleimagesdownload -k "Scottish Fold"
 ```
 30種類（人気順）×100枚
 +++
-### 選別する
-<img src="img/err1.gif" width="220px">
-+++
+### これはNG
 <img src="img/err2.jpg" width="220px">
 +++
+### これもNG
 <img src="img/err3.jpg" width="220px">
 +++
 #### ＿人人人人人人人人人人人＿
-#### ＞　これはネコじゃない　＜
+#### ＞　意外と地味で大変　＜
 #### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 
 +++
