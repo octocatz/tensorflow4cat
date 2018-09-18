@@ -5,10 +5,10 @@
 ### Who?
 
 (Photo)
-Name:
-Department:
-Joined Company:2009
-Work:SystemIntegrate/DevOps...
+Name:梅ヶ谷直紀
+Joined Company:2009年
+Work:システム構築PL/DevOps@飯田橋/汐留
+Hobby:筋トレ/一眼レフ
 
 +++
 ### 前提
@@ -16,6 +16,7 @@ Work:SystemIntegrate/DevOps...
 - 機械学習ははじめてです
 - 数学や統計学も初心者です
 - 言語はPHP/JavaScript/Perlなど
+
 +++
 ### 機械学習ってはやってますよね！
 - ニュース
@@ -27,23 +28,16 @@ Work:SystemIntegrate/DevOps...
 +++
 ### これから話すこと
 Tensorflowを使ってネコの画像認識を試してみた話😺
+初心者がやるとどうなるのかの話
 
 +++
 ### 話さないこと
 機械学習の統計とか数学的な話📊
 
 +++
-### Agenda
-- Tensorflow?
-- やったこと
-- 辛かったこと
-- 良かったこと
-- まとめ
-
-+++
 ### Tensolflow?
-ほにゃらら
-（詳しいことはWebで）
+「深層学習（ディープラーニング）を行えるライブラリ」
+詳しいことはWebで
 
 +++
 ### やったこと
@@ -182,11 +176,13 @@ for i in top_k:
 
 +++
 ### まとめ
+cons
 - 壁が結構多い。
-- 公式ドキュメントは英語のみ。
-- Stackoverflowとかに聞いても微妙。
-- でも動きが実感できる。
-- アイデア次第で色々つくれそう。
+- 公式ドキュメントは英語のみ。あまり情報ない。
+
+pros
+- 動く。楽しい。
+- 大変さが実感できる。
 
 +++
 ### Webにしてみました
