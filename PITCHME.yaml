@@ -2,7 +2,7 @@
 charts : true
 footnote : ""
 published : true
-theme : night
+# theme : night
 highlight : monokai
 # raw : false
 # theme-override : templates-sunkist/assets/css/PITCHME.css
