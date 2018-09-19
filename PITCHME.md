@@ -5,7 +5,7 @@
 ### Who?
 
 
-- Name: N.U|
+- Name: |
 - Joined Company: 2009年|
 - Work: システム構築PL && DevOps|
 - Hot: GoLang!|
@@ -16,13 +16,6 @@
 - 機械学習ははじめてです|
 - 数学や統計学も初心者です|
 - 言語はPHP/JavaScript/Perlなど|
-
-+++
-### 機械学習って流行ってますよね！
-- ニュース|
-- サービス|
-- 情報は聞くけどさわったことない|
-- 本当に使えるレベルで動くの？🙄|
 
 +++
 ### これから話すこと
@@ -36,7 +29,7 @@
 
 +++
 ### Tensolflow?
-- 「深層学習（ディープラーニング）を行える**ライブラリ**」|
+- 「深層学習(ディープラーニング)を行える**ライブラリ**」|
 - 詳しいことはWebで！|
 
 +++
@@ -106,16 +99,16 @@ googleimagesdownload -k "Scottish Fold"
 -rw-r--r-- 1 xxx xxx  233039 Sep 16 09:04 50. adult-male-blue-scottish-fold-cat-with-golden-eyes-standing-looking-picture-id505322557.jpg
 ```
 30種類（人気順）×100枚
-+++
-### 意外と手作業
-🤔🤔🤔🤔🤔
+
+が、しかし・・・
+
 +++
 
 ### これはNG
-<img src="img/err2.jpg" width="220px">
+<img src="img/err2.jpg" width="420px">
 +++
 ### これもNG
-<img src="img/err3.jpg" width="220px">
+<img src="img/err3.jpg" width="420px">
 +++
 #### ＿人人人人人人人人人人人＿
 #### ＞　意外と地味で大変　＜
@@ -149,9 +142,7 @@ python3 retrain.py \
 @[8](gakusyu_data：学習させる画像フォルダ)
 
 +++
-### エラーがつらい。
-+++
-### ファイル名のエラー
+### ファイル名 too long
 ```
 
 OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-cat-mammal-whiskers-vertebrate-british-shorthair-european-shorthair-chartreux-russian-blue-korat-cat-mia-small-to-medium-sized-cats-cat-like-mammal-domestic-short-haired-cat-american-shorthair-blue-cat's-743876.jpg_https~tfhub.dev~google~imagenet~inception_v3~feature_vector~1.txt"
@@ -159,12 +150,18 @@ OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-c
 ```
 ファイル名が長いらしい。mvで置換。
 +++
-### こんどはファイルサイズ
+### ファイルサイズ too large
 ```
 RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moonwalker_the_singapura.jpg (Invalid JPEG data or crop window, data size 1671168
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
-今度はファイルサイズ。大きいサイズの画像は消す。
+今度はファイルサイズ。
+大きいサイズの画像は消す。
+
++++
+#### ＿人人人人人人人人人人人＿
+#### ＞　おさまらないエラー　＜
+#### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 
 +++
 ### いよいよ画像を認識できるか試してみる
@@ -174,9 +171,9 @@ python3 label_image.py --xxx.jpg --graph retrained_graph.pb --labels retrained_l
 
 +++
 
-### 判定結果が出力された！
+### 判定結果が出力された！！
 ```
-egyptianmau: 0.66
+persia: 0.28
 bengal: 0.07
 american shorthair: 0.05
 singapura cat: 0.04
@@ -185,9 +182,11 @@ abyssinian: 0.03
 @[1]
 
 +++
-### 学習回数をかえてみる
-100→500の変化。すごい。
+### 学習回数を増やしてみる
+100→500の変化。結構変化する。
+
 <img src="img/cat3.jpg" width="220px">
+
 
 ```
 persia 0.124754322
@@ -200,15 +199,16 @@ persia 0.291819281
 
 +++
 ## まとめ
+
 #### pros
 - 動く。楽しい。
 - 大変さが実感できる。
+
 
 #### cons
 - 手作業（工夫の余地）が結構多い。
 - 公式ドキュメントは英語のみ。
 - 似ている種類は判別難しい。
-
 
 +++
 ### Webにしてみました
@@ -219,10 +219,12 @@ persia 0.291819281
 ### これからやりたいこと
 
 tensorflow.js(2018/05公開) 
+
 使ってみたい💪
 
 <img src="img/tensorjs.png" width="220px">
 
 +++
-### END
-Tensorflowはいいぞ
+## END
+
+### Tensorflowはいいぞ
