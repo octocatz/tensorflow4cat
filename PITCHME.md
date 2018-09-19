@@ -104,10 +104,10 @@ googleimagesdownload -k "Scottish Fold"
 
 +++
 
-### ネコ以外が入っている
+### ネコ以外が入っている→削除
 <img src="img/err2.jpg" width="520px">
 +++
-### こっち向いていない
+### こっち向いていない→削除
 <img src="img/err3.jpg" width="520px">
 +++
 #### ＿人人人人人人人人人人人＿
@@ -144,7 +144,7 @@ python3 retrain.py \
 - 今度こそ学習が完了かな・・・|
 
 +++
-### ファイル名 too long
+### エラー①：ファイル名 too long
 ```
 
 OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-cat-mammal-whiskers-vertebrate-british-shorthair-european-shorthair-chartreux-russian-blue-korat-cat-mia-small-to-medium-sized-cats-cat-like-mammal-domestic-short-haired-cat-american-shorthair-blue-cat's-743876.jpg_https~tfhub.dev~google~imagenet~inception_v3~feature_vector~1.txt"
@@ -152,7 +152,7 @@ OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-c
 ```
 ファイル名が長いらしい。mvで置換。
 +++
-### ファイルサイズ too large
+### エラー②：ファイルサイズ too large
 ```
 RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moonwalker_the_singapura.jpg (Invalid JPEG data or crop window, data size 1671168
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
