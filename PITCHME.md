@@ -8,7 +8,7 @@
 - Name: |
 - Joined Company: 2009年|
 - Work: システム構築PL && DevOps|
-- Hot: <img src="img/golang-gopher.png" width="120px">
+- Hot: <img src="img/golang-gopher.png" width="120px">|
 
 +++
 ### 前提
