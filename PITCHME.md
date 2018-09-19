@@ -8,7 +8,7 @@
 - Name: |
 - Joined Company: 2009年|
 - Work: システム構築PL && DevOps|
-- Hot: GoLang!|
+- Hot: <img src="img/golang-gopher.png" width="220px">
 
 +++
 ### 前提
@@ -200,12 +200,12 @@ persia 0.291819281
 +++
 ## まとめ
 
-#### pros
-- 動く。楽しい。
+#### Good!
+- 動く。楽しい！
 - 大変さが実感できる。
 
 
-#### cons
+#### Try
 - 手作業（工夫の余地）が結構多い。
 - 公式ドキュメントは英語のみ。
 - 似ている種類は判別難しい。
