@@ -98,20 +98,20 @@ googleimagesdownload -k "Scottish Fold"
 -rw-r--r-- 1 xxx xxx   17777 Sep 16 09:04 55. scottish-fold-1.jpg
 -rw-r--r-- 1 xxx xxx  233039 Sep 16 09:04 50. adult-male-blue-scottish-fold-cat-with-golden-eyes-standing-looking-picture-id505322557.jpg
 ```
-30種類（人気順）×100枚
+- 30種類（人気順）×100枚|
 
-が、しかし・・・
+- が、しかし・・・画像を見てみると・・・|
 
 +++
 
-### これはNG
-<img src="img/err2.jpg" width="420px">
+### ネコ以外が入っている
+<img src="img/err2.jpg" width="520px">
 +++
-### これもNG
-<img src="img/err3.jpg" width="420px">
+### こっち向いていない
+<img src="img/err3.jpg" width="520px">
 +++
 #### ＿人人人人人人人人人人人＿
-#### ＞　意外と地味で大変　＜
+#### ＞　意外と手作業が大変　＜
 #### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 
 +++
@@ -141,6 +141,8 @@ python3 retrain.py \
 @[3](training_steps：学習回数)
 @[8](gakusyu_data：学習させる画像フォルダ)
 
+- 今度こそ学習が完了かな・・・|
+
 +++
 ### ファイル名 too long
 ```
@@ -159,12 +161,15 @@ RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moo
 大きいサイズの画像は消す。
 
 +++
-#### ＿人人人人人人人人人人人＿
-#### ＞　おさまらないエラー　＜
-#### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
+#### ＿人人人人人人人人人人人人人人人人人人人人＿
+#### ＞　Googleスクレイピングは完璧じゃない　＜
+#### ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣
 
 +++
-### いよいよ画像を認識できるか試してみる
+### やっと画像認識の確認
+
+<img src="img/cat3.jpg" width="220px">
+
 ```
 python3 label_image.py --xxx.jpg --graph retrained_graph.pb --labels retrained_labels.txt
 ```
@@ -185,12 +190,12 @@ abyssinian: 0.03
 ### 学習回数を増やしてみる
 100→500の変化。結構変化する。
 
-<img src="img/cat3.jpg" width="220px">
-
-
+学習回数100回
 ```
 persia 0.124754322
 ```
+
+学習回数500回
 ```
 persia 0.291819281
 ```
@@ -207,22 +212,11 @@ persia 0.291819281
 
 #### Try
 - 手作業（工夫の余地）が結構多い。
-- 公式ドキュメントは英語のみ。
 - 似ている種類は判別難しい。
 
 +++
 ### Webにしてみました
 <img src="img/web.png" width="420px">
-
-+++
-
-### これからやりたいこと
-
-tensorflow.js(2018/05公開) 
-
-使ってみたい💪
-
-<img src="img/tensorjs.png" width="220px">
 
 +++
 ## END
