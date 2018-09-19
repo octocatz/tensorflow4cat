@@ -36,7 +36,7 @@
 
 +++
 ### Tensolflow?
-- 「深層学習（ディープラーニング）を行えるライブラリ」|
+- 「深層学習（ディープラーニング）を行える**ライブラリ**」|
 - 詳しいことはWebで！|
 
 +++
@@ -61,12 +61,14 @@ americanshorthair 0.15780476
 munchkin 0.0629924
 mikanecat 0.047680147
 persia 0.014754322
+...
 ```
 @[3]
 
 +++
 ### 環境
-- GCP VMインスタンス：n1-standard-1(vCPU x 1、メモリ 3.75 GB)
+- GCP VMインスタンス：
+    n1-standard-1(vCPU x 1、メモリ 3.75 GB)
 - OS：Debian 4.9
 - Python：3.5.3
 
@@ -105,6 +107,10 @@ googleimagesdownload -k "Scottish Fold"
 ```
 30種類（人気順）×100枚
 +++
+### 意外と手作業
+🤔🤔🤔🤔🤔
++++
+
 ### これはNG
 <img src="img/err2.jpg" width="220px">
 +++
@@ -143,6 +149,8 @@ python3 retrain.py \
 @[8](gakusyu_data：学習させる画像フォルダ)
 
 +++
+### エラーがつらい。
++++
 ### ファイル名のエラー
 ```
 
@@ -156,7 +164,6 @@ OSError: [Errno 36] File name too long: "bottlenecks/British Shorthair/85. pet-c
 RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moonwalker_the_singapura.jpg (Invalid JPEG data or crop window, data size 1671168
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
-@[fragment-range]
 今度はファイルサイズ。大きいサイズの画像は消す。
 
 +++
@@ -167,7 +174,7 @@ python3 label_image.py --xxx.jpg --graph retrained_graph.pb --labels retrained_l
 
 +++
 
-### 結果が5種類しかでない
+### 判定結果が出力された！
 ```
 egyptianmau: 0.66
 bengal: 0.07
@@ -175,24 +182,7 @@ american shorthair: 0.05
 singapura cat: 0.04
 abyssinian: 0.03
 ```
-🤔🤔🤔🤔🤔
-
-+++
-### 調べた結果・・・
-label_image.py
-```
-top_k = results.argsort()[-5:][::-1] #上位5件のみ
-labels = load_labels(label_file)
-for i in top_k:
-  print(labels[i], results[i])
-```
-```
-top_k = results.argsort()[::-1]
-labels = load_labels(label_file)
-for i in top_k:
-  print('{}: {:.2f}'.format(labels[i], results[i]))
-```
-デフォルトでは5件のみでソートしているため、変更。
+@[1]
 
 +++
 ### 学習回数をかえてみる
@@ -205,35 +195,34 @@ persia 0.124754322
 ```
 persia 0.291819281
 ```
+@[1]
+@[2]
 
 +++
-### ネコの違いは判別できたか？
-- 似てる種類はわからない。
-- むしろあってるかどうかよくわからない。
-- 明確な違いがある動物でやるといいかも。
-
-+++
-### まとめ
-cons
-- 壁が結構多い。
-- 公式ドキュメントは英語のみ。
-
-pros
+## まとめ
+#### pros
 - 動く。楽しい。
 - 大変さが実感できる。
 
+#### cons
+- 手作業（工夫の余地）が結構多い。
+- 公式ドキュメントは英語のみ。
+- 似ている種類は判別難しい。
+
+
 +++
 ### Webにしてみました
-<img src="img/web.png" width="220px">
+<img src="img/web.png" width="420px">
 
 +++
 
 ### これからやりたいこと
 
 tensorflow.js(2018/05公開) 
-<img src="img/tensorjs.png" width="220px">
 使ってみたい💪
+
+<img src="img/tensorjs.png" width="220px">
 
 +++
 ### END
-
+Tensorflowはいいぞ
