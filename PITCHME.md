@@ -158,6 +158,7 @@ RuntimeError: Error during processing file gakusyu_data_max/Singapura cat/4. moo
 	 [[Node: DecodeJpeg = DecodeJpeg[acceptable_fraction=1, channels=3, dct_method="", fancy_upscaling=true, ratio=1, try_recover_truncated=false, _device="/job:localhost/replica:0/task:0/device:CPU:0"](_arg_DecodeJPGInput_0_0)]]
 ```  
 今度はファイルサイズ。
+
 大きいサイズの画像は消す。
 
 +++
