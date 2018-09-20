@@ -222,4 +222,3 @@ persia 0.291819281
 +++
 ## END
 
-### Tensorflowはいいぞ
