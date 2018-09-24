@@ -22,13 +22,17 @@
 require('./translate.php');
 $uploaddir = 'uploads/';
 $tmpfile = $_FILES['up_file']['tmp_name'];
+// var_dump($_FILES['up_file']);
 
 if ($ext=is_img($tmpfile)) {
 } else {
-    err();
-    exit();
+    // err();
+    // exit();
 }
 
+if ($ext == ""){
+    $ext = 'jpg';
+}
 function is_img($file)
 {
     if (!(file_exists($file) && ($type=exif_imagetype($file)))) return false;
@@ -39,8 +43,8 @@ function is_img($file)
             return 'jpg';
         case IMAGETYPE_PNG:
             return 'png';
-        default:
-            return false;
+	default:
+            // return false;
     }
 }
 
@@ -50,9 +54,9 @@ exec($exec_rm);
 $rand_file_name = md5(uniqid(rand(), true));
 $rand_file_name .= '.'.$ext;
 $uploadfile = $uploaddir . $rand_file_name;
-
 if (move_uploaded_file($_FILES['up_file']['tmp_name'], $uploadfile)) {
 } else {
+    print 'アップロードに失敗しました。';
 }
 
 $img_name = $_POST["q1"];
